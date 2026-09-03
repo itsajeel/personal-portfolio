@@ -1,0 +1,554 @@
+/* styles.css - Main stylesheet for portfolio website */
+
+/* ============================================
+   Google Fonts Import
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* ============================================
+   Base Styles
+   ============================================ */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdfdfd;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+header {
+    background-color: #1a3d6e;
+    color: #fff;
+    padding: 1.5em 2em;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+header p {
+    font-size: 1em;
+    font-weight: 300;
+    margin-top: 0.3em;
+    color: #c8daf0;
+}
+
+/* ============================================
+   Navigation Styles
+   ============================================ */
+nav {
+    background-color: #245a9e;
+    padding: 0.8em 1em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 0.95em;
+    font-weight: 500;
+    padding: 0.4em 0.6em;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover {
+    color: #a3cbf5;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #fff;
+}
+
+/* ============================================
+   Page Layout - CSS Grid
+   ============================================ */
+.page-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2em;
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+
+.page-wrapper.full-width {
+    grid-template-columns: 1fr;
+}
+
+/* ============================================
+   Article Styles (Main Content Area)
+   ============================================ */
+article {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+article h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #1a3d6e;
+    margin-bottom: 0.6em;
+}
+
+article h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #245a9e;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+}
+
+article p {
+    margin-bottom: 0.9em;
+    color: #444;
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+section {
+    margin-bottom: 1.8em;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   Aside Styles (Sidebar)
+   ============================================ */
+aside {
+    background-color: #f0f5fb;
+    padding: 1.5em;
+    border-radius: 6px;
+    border-left: 3px solid #245a9e;
+    align-self: start;
+}
+
+aside h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #1a3d6e;
+    margin-bottom: 0.6em;
+}
+
+aside p {
+    font-size: 0.92em;
+    color: #555;
+    margin-bottom: 0.6em;
+}
+
+aside a {
+    color: #245a9e;
+    font-weight: 500;
+}
+
+aside a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   Figure and Figcaption Styles
+   ============================================ */
+figure {
+    margin: 1.2em 0;
+    text-align: center;
+}
+
+figure img {
+    border-radius: 6px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+footer {
+    background-color: #1a3d6e;
+    color: #c8daf0;
+    text-align: center;
+    padding: 1.5em;
+    font-size: 0.9em;
+    margin-top: 2em;
+}
+
+footer p {
+    margin-bottom: 0.3em;
+}
+
+footer a {
+    color: #a3cbf5;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* ============================================
+   Form Styles
+   ============================================ */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f7fafd;
+    padding: 2em;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2em;
+}
+
+.form-group label {
+    font-weight: 500;
+    font-size: 0.95em;
+    color: #333;
+    margin-bottom: 0.3em;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.7em 0.9em;
+    border: 1px solid #c5d3e3;
+    border-radius: 4px;
+    font-size: 0.95em;
+    background-color: #fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #245a9e;
+    box-shadow: 0 0 0 2px rgba(36, 90, 158, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.btn {
+    padding: 0.65em 1.8em;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary {
+    background-color: #245a9e;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #1a3d6e;
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* ============================================
+   Skills and Cards Layout - Flexbox
+   ============================================ */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+}
+
+.skill-card {
+    background-color: #f0f5fb;
+    padding: 1.2em;
+    border-radius: 6px;
+    flex: 1 1 200px;
+    border-left: 3px solid #245a9e;
+}
+
+.skill-card h3 {
+    font-size: 1.05em;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+}
+
+.skill-card p {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* ============================================
+   Project Cards - Flexbox
+   ============================================ */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.project-card {
+    background-color: #f7fafd;
+    padding: 1.5em;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+}
+
+.project-card h3 {
+    margin-top: 0;
+}
+
+.project-card p {
+    font-size: 0.93em;
+}
+
+/* ============================================
+   Education Timeline
+   ============================================ */
+.timeline-item {
+    padding-left: 1.2em;
+    border-left: 2px solid #245a9e;
+    margin-bottom: 1.5em;
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+}
+
+.timeline-item .date {
+    font-size: 0.85em;
+    color: #777;
+    font-weight: 500;
+}
+
+/* ============================================
+   Utility Classes
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 1em;
+}
+
+/* ============================================
+   Blog Post Styles
+   ============================================ */
+.blog-post {
+    background-color: #f7fafd;
+    padding: 1.5em;
+    border-radius: 6px;
+    margin-bottom: 1.5em;
+    border-left: 3px solid #245a9e;
+}
+
+.post-date {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 0.4em;
+    text-align: right;
+}
+
+.post-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    color: #1a3d6e;
+    margin-bottom: 0.6em;
+    margin-top: 0;
+}
+
+.post-body {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #444;
+}
+
+article hr {
+    border: none;
+    border-top: 1px solid #e2e8f0;
+    margin: 1.5em 0;
+}
+
+/* ============================================
+   Blog Controls
+   ============================================ */
+.blog-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.month-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+}
+
+.month-filter label {
+    font-size: 0.9em;
+    color: #555;
+    font-weight: 500;
+}
+
+.month-filter select {
+    padding: 0.5em 0.8em;
+    border: 1px solid #c5d3e3;
+    border-radius: 4px;
+    font-size: 0.9em;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.month-filter select:focus {
+    border-color: #245a9e;
+    outline: none;
+}
+
+/* ============================================
+   Form Validation Error Styling
+   ============================================ */
+.input-error {
+    border-color: #d9534f !important;
+    background-color: #fdf3f3 !important;
+    box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.15) !important;
+}
+
+.error-message {
+    color: #d9534f;
+    background-color: #fdf3f3;
+    padding: 0.7em 1em;
+    border-radius: 4px;
+    border-left: 3px solid #d9534f;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}
+
+/* ============================================
+   Preview Page Styles
+   ============================================ */
+.preview-banner {
+    background-color: #fff8e1;
+    border: 1px dashed #d4a017;
+    border-radius: 6px;
+    padding: 1em;
+    margin: 1.5em 0;
+}
+
+.preview-label {
+    text-align: center;
+    color: #d4a017;
+    font-weight: 700;
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.8em;
+}
+
+.preview-actions {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin: 1em 0 1.5em 0;
+    flex-wrap: wrap;
+}
+
+.preview-actions .btn {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+/* ============================================
+   Responsive Layout
+   ============================================ */
+@media (max-width: 768px) {
+
+    .page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
+        padding: 0 1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.6em;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    article {
+        padding: 1.2em;
+    }
+
+    .blog-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .month-filter {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .skill-card {
+        flex: 1 1 100%;
+    }
+
+    .form-buttons {
+        flex-wrap: wrap;
+    }
+
+    .post-date {
+        text-align: left;
+    }
+}
