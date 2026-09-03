@@ -65,6 +65,23 @@ Requirements: PHP 7+, MySQL, a local server (XAMPP, MAMP, or similar).
 
 5. Open `http://localhost/personal-portfolio/index.php` in your browser.
 
+## Screenshots
+
+### Homepage
+![Homepage showing About Me section and Quick Links sidebar](screenshots/homepage.png)
+
+### Portfolio Page
+![Portfolio page listing my university projects](screenshots/portfolio.png)
+
+### Blog
+![Dynamic blog with posts and filtering controls](screenshots/blog.png)
+
+### Blog with Filter Applied
+![Blog filtered by month using PHP query](screenshots/blog-filter.png)
+
+### Login
+![User authentication form for blog posting access](screenshots/login.png)
+
 ## Coursework Context
 
 This project was Phase 2 of the ECS417U coursework, building on Phase 1's static HTML/CSS portfolio. Phase 2 added:
